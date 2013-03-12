@@ -19,4 +19,14 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
         $actual = $this->calculator->display();
         $this->assertEquals($expected, $actual);
     }
+
+    public function testAddition()
+    {
+        $this->calculator = new Calculator();
+        $this->calculator->add(10);
+
+        $expected = 10;
+        $actual = $this->calculator->display();
+        $this->assertEquals($expected, $actual);
+    }
 }
